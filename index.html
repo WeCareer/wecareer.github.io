@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCareer - Recruitment and Career Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom 3D text effect with layered shadows */
+        .text-3d {
+            text-shadow: 
+                1px 1px 0 #000,
+                2px 2px 0 #000,
+                3px 3px 0 #000,
+                4px 4px 0 #000,
+                5px 5px 0 #000,
+                6px 6px 0 rgba(0,0,0,0.5);
+            -webkit-text-stroke: 1px #333;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 leading-relaxed">
+
+     <!-- Hero with static background image and integrated Navbar -->
+     <section class="relative w-full h-[800px] md:h-[900px] overflow-hidden">
+        <!-- Navbar - Fixed position for constant visibility -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 md:px-8">
+                <div class="flex items-center space-x-2">
+                    <img src="WeCareer-logo4.png" alt="WeCareer Logo" style="height: 120px">
+                </div>
+                <nav class="hidden md:flex space-x-6" id="desktop-nav">
+                    <a href="#about" class="text-2xl font-medium text-white hover:text-red-500 transition-colors duration-300">About Us</a>
+                    <a href="#services" class="text-2xl font-medium text-white hover:text-red-500 transition-colors duration-300">Services</a>
+                    <a href="#events" class="text-2xl font-medium text-white hover:text-red-500 transition-colors duration-300">Events & News</a>
+                    <a href="#What Our Clients Say" class="text-2xl font-medium text-white hover:text-red-500 transition-colors duration-300">What Our Clients Say</a>
+                    <a href="#founder" class="text-2xl font-medium text-white hover:text-red-500 transition-colors duration-300">Founder</a>
+                    <a href="#contact" class="text-2xl font-medium text-white hover:text-red-500 transition-colors duration-300">Contact</a>
+                </nav>
+                <button class="md:hidden text-white hover:text-red-500" id="menu-toggle">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden bg-black/20">
+                <a href="#about" class="block w-full text-left px-8 py-4 text-2xl font-medium text-white hover:bg-gray-50" onclick="closeMenu()">About Us</a>
+                <a href="#services" class="block w-full text-left px-8 py-4 text-2xl font-medium text-white hover:bg-gray-50" onclick="closeMenu()">Services</a>
+                <a href="#events" class="block w-full text-left px-8 py-4 text-2xl font-medium text-white hover:bg-gray-50" onclick="closeMenu()">Events & News</a>
+                <a href="#What Our Clients Say" class="block w-full text-left px-8 py-4 text-2xl font-medium text-white hover:bg-gray-50" onclick="closeMenu()">What Our Clients Say</a>
+                <a href="#founder" class="block w-full text-left px-8 py-4 text-2xl font-medium text-white hover:bg-gray-50" onclick="closeMenu()">Founder</a>
+                <a href="#contact" class="block w-full text-left px-8 py-4 text-2xl font-medium text-white hover:bg-gray-50" onclick="closeMenu()">Contact</a>
+            </div>
+        </header>
+
+        <!-- Single Hero Image -->
+        <img src="customer success ai agent.jpg" alt="Hero Image" class="w-full h-full object-cover">
+        
+        <!-- Overlay Text -->
+        <div class="absolute inset-0 bg-black/20 flex flex-col items-end justify-end text-right p-8 md:p-12">
+            <div class="w-full max-w-4xl">
+                <h1 class="text-white text-4xl md:text-6xl font-extrabold leading-tight text-3d">WeCareer network building<br>and talent solutions</h1>
+                <p class="text-gray-200 mt-4 text-xl md:text-2xl drop-shadow-lg">WE CAREER, WE TOGETHER, WE GO FURTHER</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增的统一内容容器，处理两侧的边距 -->
+    <main class="mx-auto max-w-6xl px-4 md:px-8">
+        <!-- About Us -->
+        <!-- 移除了原有的宽度类，由父级容器控制 -->
+        <section id="about" class="py-20">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-4 text-[#333333]">About Us</h2>
+                <p class="text-gray-600 text-justify mx-auto text-lg leading-relaxed">
+                    We are a modern, fast-growing recruitment and career consulting firm in North America, dedicated to connecting companies with the right talent while guiding students and professionals in shaping their future careers. Our dual focus ensures that both employers and job seekers benefit from our expertise and commitment.<br><br>Bridging the gap between potential and opportunity, we create a win-win for employers seeking exceptional talent and candidates aiming to advance their careers. Our extensive global talent network, innovative use of AI tools, and relentless drive allow us to be more agile and responsive than traditional talent acquisition firms.
+                </p>
+                <div class="mt-12">
+                    <h3 class="text-3xl font-bold mb-4 text-[#333333]">Vision and Mission</h3>
+                    <p class="text-gray-600 text-justify mx-auto text-lg leading-relaxed">
+                        Driven by a mission to consistently exceed the expectations of our clients and business partners, we strive to simplify the job search process and supporting individuals in discovering their next professional adventure. Our team operates with a shared goal: to excel in connecting highly qualified professionals with suitable positions across diverse industries, including AI, Gaming, Investment, Banking, E-commerce, FinTech, BioTech, and Renewable Energy. We are dedicated to establishing ourselves as the premier staffing agency in North America.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <!-- 移除了原有的宽度类，由父级容器控制 -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#333333]">Our Services</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="shadow-2xl rounded-3xl overflow-hidden transform hover:scale-105 transition-transform duration-300 bg-white">
+                    <div class="p-8">
+                        <div class="flex items-center justify-center w-16 h-16 bg-[#E64A2E] text-white rounded-full mb-6 mx-auto md:mx-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-center md:text-left">For Companies</h3>
+                        <!-- Justified text alignment -->
+                        <p class="text-gray-600 text-justify">
+                            With an average of 8 years' recruitment experience, we specialize in tailored recruitment services to help your organization find specialized talent quickly and efficiently. Our process ensures the perfect match, saving your time and resources.
+                        </p>
+                    </div>
+                </div>
+                <div class="shadow-2xl rounded-3xl overflow-hidden transform hover:scale-105 transition-transform duration-300 bg-white">
+                    <div class="p-8">
+                        <div class="flex items-center justify-center w-16 h-16 bg-[#4A90E2] text-white rounded-full mb-6 mx-auto md:mx-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-user"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path><circle cx="12" cy="8" r="4"></circle><path d="M6 15h12"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-center md:text-left">For Students and Early Professionals</h3>
+                        <!-- Justified text alignment -->
+                        <p class="text-gray-600 text-justify">
+                            For students and early professionals, our personalized coaching and mentorship programs empower individuals to navigate career decisions and build successful futures, ensuring every client receives tailored support and guidance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Events & News -->
+    <section id="events" class="py-20 max-w-6xl mx-auto px-4 md:px-8">
+        <h2 class="text-4xl font-bold mb-12 text-center text-[#333333]">Events & News</h2>
+        <div class="grid md:grid-cols-1 gap-8">
+            <div class="shadow-lg rounded-2xl border-t-4 border-[#7BB661] overflow-hidden bg-white">
+                <div class="grid md:grid-cols-3 gap-0">
+                    <img src="c9724bee86b05e09a053416727a55547.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="1747a14ac72e8c14381a36850282851e.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="f66e7545c690ee9a2cda2c6277a1e1d5.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Exploring the Future, At the Core of the AI Revolution</h3>
+                    <!-- Justified text alignment -->
+                    <p class="text-gray-600 text-justify text-sm">
+                        Together with scholars, professionals, and entrepreneurs from diverse industries, we conducted in-depth discussions on the latest AI trends, explored future application directions, and shared job market insights to empower talent mobility. Key topics include AI in healthcare, AI in education, real-world application cases and future trends, as well as career pathways in AI. The final networking session was extended from one hour to two, ending only when participants reluctantly wrapped up their conversations.
+                    </p>
+                    <p class="mt-4 text-sm text-gray-500">Event Date: 2024/04/28</p>
+                </div>
+            </div>
+            <!-- Second Event Card -->
+            <div class="shadow-lg rounded-2xl border-t-4 border-[#E64A2E] overflow-hidden bg-white">
+                <div class="grid md:grid-cols-3 gap-0">
+                    <img src="ca56b1556e664098a28b565eee1ab1a9.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="d2015a3466a02250e8a9f4c51d4a85e7.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="edeebf7bddf97c29e653744259dffadf.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">WeCareer Club Fall Hiking - 2024</h3>
+                    <!-- Justified text alignment -->
+                    <p class="text-gray-600 text-justify text-sm">
+                        On the first weekend of October 2024, participants from the finance, technology, and consulting sectors met in the morning at a parking lot to begin a hiking trip focused on outdoor activity and relaxation. The event included food, drinks, social interaction, observation of red maple leaves, recreational activities, and opportunities for rest.
+                    </p>
+                    <p class="mt-4 text-sm text-gray-500">Event Date: 2024/10/06</p>
+                </div>
+            </div>
+            <!-- Third Event Card -->
+            <div class="shadow-lg rounded-2xl border-t-4 border-[#7BB661] overflow-hidden bg-white">
+                <div class="grid md:grid-cols-3 gap-0">
+                    <img src="5a040633803312b1a8f4903668f1dfda.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="5df6ddfd82b88ce24cde63aef2e119dd.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="a5de34fb3fe2ac11bc13f6814b7454f1.jpg" alt="活动主机" class="w-full h-48 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Entrepreneur Round Table</h3>
+                    <!-- Justified text alignment -->
+                    <p class="text-gray-600 text-justify text-sm">
+                        A great opportunity to assess the feasibility and practicality of starting a business in North America. We connected with some of the most talented people across various industries online and offline, forming meaningful relationships with guest speakers from Block Chain AI, BioTech, Logistics Software Solutions, and Real Estate. 
+                    </p>
+                    <p class="mt-4 font-semibold text-gray-700">Key Takeaways:</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-1 mt-2">
+                        <li>Entrepreneurship is a lifestyle: It offers freedom but comes with uncertainty and income instability, especially in the early stages.</li>
+                        <li>Success cannot be copied, but the lessons from failure are far more valuable than merely hearing about someone’s success.</li>
+                        <li>There’s no such thing as “great timing.” Take action and bring your plan to life without hesitation.</li>
+                        <li>Incorporating a company? It might be important, but it’s not an excuse to delay starting. Often, identifying your first demand is what drives you to register a business.</li>
+                    </ul>
+                    <p class="mt-4 text-gray-600 text-sm">This event is dedicated to encouraging those with great ideas who may also have hesitations.</p>
+                    <p class="mt-4 text-sm text-gray-500">Event Date: 2024/12/07</p>
+                </div>
+            </div>
+            <!-- Fourth Event Card -->
+            <div class="shadow-lg rounded-2xl border-t-4 border-[#4A90E2] overflow-hidden bg-white">
+                <div class="grid md:grid-cols-3 gap-0">
+                    <img src="0ca1ac8abc69fa44c444806ecd7962d3.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="1fa2d8c264bd572c204ad0e045feb638.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                    <img src="7b8b9772722317590f66dcd584a2afce.jpg" alt="活动照片" class="w-full h-48 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">North American Career Trends Amid Global Changes</h3>
+                    <!-- Justified text alignment -->
+                    <p class="text-gray-600 text-justify text-sm">
+                        We were excited to host an event that explored the North American career landscape, with a special focus on effective job search strategies. The venue accommodated up to 60 participants, and a virtual attendance option was provided to increase accessibility. It has been a year since our last update of the talent market insights, and we remain committed to fostering opportunities for networking, idea exchange, and mutual support throughout this process. This time, we invited 3 guest speakers from Data Risk, Retail Marketing, and HR sectors for sharing their stories and career journies.
+                    </p>
+                    <p class="mt-4 font-semibold text-gray-700">Topics and Activities:</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-1 mt-2">
+                        <li>A grounded look at 2025 North American job trends</li>
+                        <li>Practical approaches to job searching and networking in today's environment</li>
+                        <li>Overview of available company resources</li>
+                        <li>Opportunities for open dialogue with industry experts</li>
+                        <li>Refreshments and networking sessions </li>
+                    </ul>
+                    <p class="mt-4 text-sm text-gray-500">Event Date: 2025/06/21</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Our Clients Say -->
+    <section id="What Our Clients Say" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center text-[#333333]">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="rounded-2xl shadow-2xl overflow-hidden border-l-4 border-[#E64A2E] bg-white">
+                    <div class="p-6">
+                        <p class="italic mb-4 text-gray-700 leading-relaxed">
+                            “Working with WeCareer was a game-changer for our hiring process. They quickly understood our needs for the Tech Investor role and delivered top-tier candidates who were a perfect fit for our company culture. We couldn't be happier with the results!”
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/cccccc/333333?text=R" alt="Client Logo" class="w-12 h-12 rounded-full mr-4">
+                            <span class="font-semibold text-gray-800">– Richard, Hiring Manager of A Global Top VC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl shadow-2xl overflow-hidden border-l-4 border-[#4A90E2] bg-white">
+                    <div class="p-6">
+                        <p class="italic mb-4 text-gray-700 leading-relaxed">
+                            “The career coaching I received from WeCareer was invaluable. They helped me articulate my skills, refine my resume, and gain the confidence to land my dream job. I highly recommend their services to any student or new graduate.”
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/cccccc/333333?text=D" alt="Student Photo" class="w-12 h-12 rounded-full mr-4">
+                            <span class="font-semibold text-gray-800">– Dan, Recent Graduate Majored in Computer Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl shadow-2xl overflow-hidden border-l-4 border-[#7BB661] bg-white">
+                    <div class="p-6">
+                        <p class="italic mb-4 text-gray-700 leading-relaxed">
+                            “The professionalism of the WeCareer team was incredible from start to finish. They not only helped me secure a great offer but also navigated complex negotiations with the client, ensuring a smooth process. Their industry insight is top-notch, and it was so effective that I later became a client myself. They then helped me build a four-person team in just one month, which speaks volumes about their efficiency and expertise.”
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/cccccc/333333?text=O" alt="Candidate Photo" class="w-12 h-12 rounded-full mr-4">
+                            <span class="font-semibold text-gray-800">– Owen, C-level Candidate turned Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl shadow-2xl overflow-hidden border-l-4 border-[#E64A2E] bg-white">
+                    <div class="p-6">
+                        <p class="italic mb-4 text-gray-700 leading-relaxed">
+                            “This was our first time working with WeCareer, and their speed and precision exceeded our expectations. They understood our needs from the very first meeting for the Product Manager role and quickly provided a shortlist of highly qualified candidates. The quality of their matches was remarkable, and their ability to offer multiple great options showed how strong their talent pool is. They saved us a tremendous amount of time.”
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/cccccc/333333?text=D" alt="HR Photo" class="w-12 h-12 rounded-full mr-4">
+                            <span class="font-semibold text-gray-800">– Daisey, HR Manager of a Global E-commerce Company</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl shadow-2xl overflow-hidden border-l-4 border-[#4A90E2] bg-white">
+                    <div class="p-6">
+                        <p class="italic mb-4 text-gray-700 leading-relaxed">
+                            “We were searching for a versatile HR Manager and a General Legal Counsel in the U.S., these roles were extremely challenging for other agencies for over half year. WeCareer's team demonstrated incredible resilience and professionalism. Their efficient communication, comprehensive market mapping, and professional project management resulted in successful placements in just around a month. They delivered where others had given up, and we were incredibly impressed.”
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/cccccc/333333?text=M" alt="HR Photo" class="w-12 h-12 rounded-full mr-4">
+                            <span class="font-semibold text-gray-800">– Michael, HR Manager of a FinTech Company</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Testimonial 4 -->
+                <div class="rounded-2xl shadow-2xl overflow-hidden border-l-4 border-[#8B5CF6] bg-white">
+                    <div class="p-6">
+                        <p class="italic mb-4 text-gray-700 leading-relaxed">
+                            “Hiring for a senior AI role for our startup was a huge challenge, especially when our top candidate was on the verge of declining. The WeCareer team's professional intervention was a game-changer. They successfully navigated a complex salary negotiation and helped us secure the perfect hire. That engineer's performance has been outstanding, and we couldn't be happier. Their professionalism and dedication were exemplary, and we look forward to a long-term partnership.”
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/cccccc/333333?text=A" alt="Co-Founder Photo" class="w-12 h-12 rounded-full mr-4">
+                            <span class="font-semibold text-gray-800">– Alexandre, Startup Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder -->
+        <!-- Updated to align photo with the top of the text content -->
+        <section id="founder" class="py-20">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-6 text-[#333333]">Meet Our Founder</h2>
+                <!-- The parent flex container now uses 'items-start' to align content to the top -->
+                <div class="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-8">
+                    <!-- Photo section (50% width on medium screens and up) -->
+                    <div class="w-full md:w-1/2 flex-shrink-0">
+                        <img src="39b525ba53207d8e69233acefa122444copy.jpg" 
+                             alt="Photo of the company founder" 
+                             class="w-full h-auto object-cover rounded-md shadow-md transform transition-transform duration-300 hover:scale-105">
+                    </div>
+
+                    <!-- Text section (50% width on medium screens and up) -->
+                    <!-- The inner flex container 'justify-center' is removed to avoid vertical centering of the text content -->
+                    <div class="w-full md:w-1/2 space-y-4 text-center md:text-left">
+                        <div class="text-center">
+                             <p class="text-2xl font-semibold text-gray-600 inline">Chenxi Qiao</p>
+                             <span class="text-sm text-gray-600">, President & CEO</span>
+                        </div>
+                        
+                        <p class="text-gray-700 text-lg leading-relaxed text-justify">
+                            <strong>Chenxi</strong> brings <strong>9 years of experience</strong> in FTE recruitment and career consulting. She is deeply passionate about helping both companies find the perfect fit and individuals discover a career path that fulfills them. During the initial three years of her career, she specialised in executive search within China’s internet industry and handled senior roles across the sector. After relocating to Canada, her work shifted to the North American market, partnering with PE/VC firms, gaming companies, AI software providers, internet businesses, and e-commerce companies—as well as SMBs— to build teams and hire top talent. Selected successful placements include:
+                        </p>
+                        <p class="font-bold text-justify">Tech Roles:</p>
+                        <ul class="list-disc list-inside text-gray-700 pl-4 space-y-2 mb-4">
+                            <li class="text-justify">Senior Machine Learning Engineer for an AI start-up (AI + supply chain management)</li>
+                            <li class="text-justify">Tech Head for a global fintech brand</li>
+                            <li class="text-justify">Product Manager for a global e-commerce company</li>
+                        </ul>
+                        <p class="font-bold text-justify">Non-Tech Roles:</p>
+                        <ul class="list-disc list-inside text-gray-700 pl-4 space-y-2 mb-4">
+                            <li class="text-justify">CSO for an internet unicorn</li>
+                            <li class="text-justify">Sales Director for a global retail company</li>
+                            <li class="text-justify">PR Manager for a global e-commerce company</li>
+                            <li class="text-justify">HR Manager for a quant fund</li>
+                        </ul>
+                        <p class="mt-6 text-justify">
+                            Her faith for WeCareer is to create a more effective approach to talent acquisition and career development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl font-bold mb-6 text-center text-[#333333]">Contact Us</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+                Have a question or want to get started? We're here to help. Reach out to us directly.
+            </p>
+            <!-- Single column for contact info -->
+            <div class="space-y-8 max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-xl">
+                <!-- Email Contact -->
+                <div class="flex items-start">
+                    <div class="p-3 bg-blue-500 text-white rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Email</h3>
+                        <a href="mailto:txixiqiao@gmail.com" class="text-gray-600 hover:text-red-500 transition-colors">txixiqiao@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Contact -->
+                <div class="flex items-start">
+                    <div class="p-3 bg-sky-700 text-white rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/company/wecareerconsulting/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-red-500 transition-colors">WeCareer Consulting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-8 mt-10">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <p class="mb-2">© <span id="current-year"></span> WeCareer. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">We Do We</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle logic
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            window.closeMenu = function() {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            };
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Image carousel logic for Events & News section
+            const eventImages = document.querySelectorAll('.event-image');
+            eventImages.forEach(image => {
+                let currentIndex = 0;
+                const images = JSON.parse(image.getAttribute('data-images'));
+                
+                // Change image every 3 seconds
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    image.src = images[currentIndex];
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
